@@ -1,31 +1,25 @@
 import React from 'react';
-import backgroundImage from './assets/background.jpg'; // Para importação direta
-
+import { FaWhatsapp } from 'react-icons/fa'; // Importando o ícone do WhatsApp
+import backgroundImage from './assets/background.jpg';
 const Linktree = () => {
   return (
     <div 
-      className="flex flex-col items-center justify-center min-h-screen"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'contain', // Ajuste para 'cover', 'contain' ou valores específicos
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed', // Se você quiser que a imagem fique fixa ao rolar
-      }}
+      className="flex items-center justify-center h-screen bg-cover bg-center" 
+      style={{ backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'contain', // Ajuste para 'cover', 'contain' ou valores específicos
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed', }} // Substitua pelo caminho da sua imagem
     >
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center relative">
-        <a 
-          href="https://wa.me/1234567890" // Substitua pelo número de WhatsApp correto
-          className="inline-block bg-yellow-500 text-white font-semibold py-2 px-4 rounded hover:bg-yellow-600"
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          Entre em contato pelo WhatsApp
-        </a>
-      </div>
+      <a 
+        href="https://wa.me/991380322" 
+        className="flex items-center justify-center px-8 py-4 text-white text-lg font-medium bg-black rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-gray-800"
+      >
+        <FaWhatsapp className="mr-2 text-2xl" />
+        Fale Conosco no WhatsApp
+      </a>
     </div>
   );
 };
 
 export default Linktree;
-
